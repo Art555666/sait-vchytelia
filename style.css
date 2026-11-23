@@ -121,3 +121,43 @@ footer{background:var(--surface)}.copyright{border-color:var(--line);color:var(-
 @media(max-width:520px){.pageHero h1{font-size:clamp(34px,10vw,45px);letter-spacing:-1.4px}.pageHero p{font-size:13px}.section{padding-top:50px;padding-bottom:50px}.grid article,.formBox,.lesson-detail{padding:18px}}
 
 .quizSettings{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 22px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--surface-alt)}.quizSettings label{display:grid;gap:8px;min-width:190px;color:var(--text);font-size:13px}.quizSettings select{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:11px 13px;min-width:180px}.bestScore{font-size:12px;color:var(--muted);padding:10px 0}.answer input:focus-visible,.quizSettings select:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:3px}
+
+/* Профіль майбутнього педагога */
+.profileSection{display:grid;gap:34px}.profileCard{display:grid;grid-template-columns:minmax(220px,320px) 1fr;align-items:center;gap:clamp(24px,5vw,55px);padding:clamp(20px,4vw,42px);border:1px solid var(--line);border-radius:22px;background:var(--surface);box-shadow:var(--shadow)}.profilePhotoWrap{overflow:hidden;border-radius:17px;background:var(--surface-alt);aspect-ratio:4/5}.profilePhoto{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}.profileInfo h2{font-size:clamp(27px,3.6vw,42px);line-height:1.2;letter-spacing:-1px;margin:12px 0 16px}.profileInfo h2 em,.profileText h2 em{color:var(--accent);font-style:normal}.profileLead{font-size:15px;line-height:1.85;color:var(--muted);max-width:620px}.skillTags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.skillTags span{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface-alt);font-size:12px;font-weight:700;color:var(--text)}.profileText{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(24px,5vw,60px);align-items:center}.profileText h2{font-size:clamp(25px,3vw,34px);margin:10px 0 16px}.profileText p{font-size:14px;line-height:1.95;color:var(--muted)}.profileQuote{padding:28px;border-radius:18px;background:linear-gradient(135deg,#101b34,#172957);color:#fff}.profileQuote>span{font-size:27px;font-weight:800;color:#7de2f7}.profileQuote p{font-size:15px;line-height:1.8;color:#e0e8f7;margin-bottom:0}.profileValues{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.profileValues article{padding:22px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}.profileValues article>span{font-size:12px;font-weight:800;color:var(--accent)}.profileValues h3{font-size:15px;margin:12px 0 8px}.profileValues p{font-size:12px;line-height:1.8;color:var(--muted);margin-bottom:0}
+:root[data-theme="dark"] .skillTags{background:var(--surface-alt)}
+@media(max-width:700px){.profileCard{grid-template-columns:1fr}.profilePhotoWrap{max-width:340px;width:100%;margin:auto}.profileText{grid-template-columns:1fr}.profileValues{grid-template-columns:1fr}}
+
+
+/* v11 — охайна таблиця оцінювання та картки навчальних документів */
+.assessmentTableWrap{width:100%;overflow-x:auto;margin:18px 0 34px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow);-webkit-overflow-scrolling:touch}
+.assessmentTableWrap:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:3px}
+.assessmentTable{width:100%;min-width:790px;border-collapse:separate;border-spacing:0;table-layout:fixed;color:var(--text);font-size:13px;line-height:1.7}
+.assessmentTable th,.assessmentTable td{padding:17px 18px;text-align:left;vertical-align:top;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.assessmentTable th:last-child,.assessmentTable td:last-child{border-right:0}
+.assessmentTable tbody tr:last-child td{border-bottom:0}
+.assessmentTable th{background:var(--surface-alt);font-size:12px;line-height:1.45;font-weight:800;color:var(--text);letter-spacing:.01em}
+.assessmentTable th:first-child{width:21%}.assessmentTable th:nth-child(2){width:25%}.assessmentTable th:nth-child(3){width:25%}.assessmentTable th:nth-child(4){width:29%}
+.assessmentTable td:first-child{font-weight:750;color:var(--text);background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+.assessmentTable tbody tr:nth-child(even) td:not(:first-child){background:var(--surface-alt)}
+.assessmentTable tbody tr:hover td{background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
+.sourceDocuments{padding-top:20px}.documentGrid{margin-top:22px}.documentCard{position:relative;overflow:hidden}.documentCard small{display:block;color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.08em;margin:12px 0 7px}.documentCard h3{font-size:20px}.documentCard p{min-height:58px;color:var(--muted);line-height:1.8}.documentIcon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:var(--surface-alt);font-size:24px}.documentCard .btn{margin-top:8px}
+@media(max-width:700px){.assessmentTable{font-size:12px}.assessmentTable th,.assessmentTable td{padding:13px 14px}.documentCard p{min-height:0}}
+
+
+/* Version 12: technology map, embedded activities, error analysis and safety links */
+.tableScroll{width:100%;overflow-x:auto;margin:22px 0 28px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 8px 24px rgba(20,35,70,.05)}
+.lessonMap,.errorTable{width:100%;border-collapse:separate;border-spacing:0;min-width:850px;font-size:14px;line-height:1.65}
+.lessonMap th,.lessonMap td,.errorTable th,.errorTable td{padding:15px 16px;text-align:left;vertical-align:top;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lessonMap thead th,.errorTable thead th{background:var(--surface-alt);color:var(--text);font-weight:800;font-size:13px;letter-spacing:.01em}
+.lessonMap tbody th{min-width:155px;color:var(--text);font-weight:750;background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.lessonMap tbody th span{display:inline-block;margin-top:4px;color:var(--accent);font-size:12px;font-weight:800}
+.lessonMap tbody tr:nth-child(even) td,.errorTable tbody tr:nth-child(even) td{background:var(--surface-alt)}
+.lessonMap tr:last-child th,.lessonMap tr:last-child td,.errorTable tr:last-child td{border-bottom:0}
+.lessonMap th:last-child,.lessonMap td:last-child,.errorTable th:last-child,.errorTable td:last-child{border-right:0}
+.errorTable{min-width:760px}.errorTable td:last-child{text-align:center;white-space:nowrap;font-weight:800;color:var(--accent)}
+.embedPanel{margin:24px 0 8px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface-alt)}
+.embedHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.embedHeading h3{margin:0}.embedHeading span{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--surface);padding:7px 10px;border-radius:999px}
+.embedFrame{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#fff}.embedFrame iframe{display:block;width:100%;border:0}.formEmbed iframe{height:620px}.learningEmbed iframe{height:520px}.embedHint{font-size:13px;color:var(--muted);margin:12px 0 0;line-height:1.65}
+.safetyQuickLinks{margin:26px 0;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface-alt)}
+.safetyQuickLinks h3{margin-top:0}.quickLinkGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.quickLink{display:block;padding:16px;border:1px solid var(--line);border-radius:13px;background:var(--surface);text-decoration:none;color:var(--text)}.quickLink strong,.quickLink span{display:block}.quickLink span{margin-top:6px;color:var(--muted);font-size:13px;line-height:1.55}.quickLink:hover{border-color:var(--accent);transform:translateY(-1px)}
+@media(max-width:700px){.embedPanel{padding:14px}.formEmbed iframe{height:650px}.learningEmbed iframe{height:480px}.quickLinkGrid{grid-template-columns:1fr}.lessonMap,.errorTable{font-size:13px}}
